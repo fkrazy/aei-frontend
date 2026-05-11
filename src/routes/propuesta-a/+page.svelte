@@ -147,7 +147,7 @@
     z-index: 100;
     background: rgba(46, 91, 168, 0.95);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: none;
   }
   .nav-inner {
     max-width: var(--spacing-container);
