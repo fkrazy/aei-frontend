@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <!-- PROPUESTA B: Recomendación experta — AEI como protagonista, layout moderno -->
 <div class="page">
 
@@ -119,7 +123,7 @@
         <span class="brand-aei">AEI</span>
         <span class="footer-powered">Respaldado por Canal X y Yo</span>
       </div>
-      <a href="/" class="back">← Volver al selector</a>
+      <a href="{base}/" class="back">← Volver al selector</a>
     </div>
   </footer>
 </div>

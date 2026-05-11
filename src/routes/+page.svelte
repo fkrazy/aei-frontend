@@ -1,8 +1,12 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+</script>
+
 <div class="selector">
   <h1>AEI — Propuestas de Diseño</h1>
   <p>Selecciona una propuesta para previsualizar</p>
   <div class="opciones">
-    <a href="/propuesta-a" class="opcion opcion-a">
+    <a href="{base}/propuesta-a" class="opcion opcion-a">
       <span class="tag">Propuesta A</span>
       <h2>Fiel al cliente</h2>
       <p>Fondo azul dominante, estilo visual del PPT original adaptado a web. Respeta 100% la visión del cliente.</p>
@@ -15,7 +19,7 @@
       <span class="cta">Ver Propuesta A →</span>
     </a>
 
-    <a href="/propuesta-b" class="opcion opcion-b">
+    <a href="{base}/propuesta-b" class="opcion opcion-b">
       <span class="tag">Propuesta B</span>
       <h2>Recomendación experta</h2>
       <p>AEI como marca protagonista. Azul como acento estratégico, layout moderno que convierte mejor.</p>

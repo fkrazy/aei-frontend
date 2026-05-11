@@ -1,3 +1,8 @@
+<script lang="ts">
+  import { base } from '$app/paths';
+  const cursos = ['Radiología Básica', 'Ultrasonido Avanzado', 'Tomografía Computada', 'Resonancia Magnética'];
+</script>
+
 <!-- PROPUESTA A: Fiel al cliente — fondo azul dominante -->
 <div class="page">
 
@@ -121,14 +126,11 @@
   </section>
 
   <footer class="footer">
-    <a href="/" class="back">← Volver al selector</a>
+    <a href="{base}/" class="back">← Volver al selector</a>
     <span>AEI · Arte Educación Inteligente</span>
   </footer>
 </div>
 
-<script lang="ts">
-  const cursos = ['Radiología Básica', 'Ultrasonido Avanzado', 'Tomografía Computada', 'Resonancia Magnética'];
-</script>
 
 <style>
   .page {
