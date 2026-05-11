@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  /* Colores base del cliente */
+  --color-primary: #4472C4;
+  --color-primary-dark: #2E5BA8;
+  --color-primary-light: #5B9BD5;
+  --color-accent-gold: #FFC000;
+  --color-accent-orange: #ED7D31;
+  --color-accent-green: #70AD47;
+  --color-text-dark: #44546A;
+  --color-text-white: #FFFFFF;
+  --color-text-secondary: #E7E6E6;
+  --color-bg-light: #F4F6FB;
+  --color-bg-white: #FFFFFF;
+  --color-border-white: rgba(255, 255, 255, 0.6);
+
+  /* Tipografía */
+  --font-family: 'Inter', sans-serif;
+  --font-size-hero: 3rem;
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+
+  /* Espaciado */
+  --spacing-section: 80px;
+  --spacing-container: 1200px;
+  --gap-grid: 24px;
+
+  /* Border radius */
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+
+  /* Sombras */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 40px 20px rgba(255, 255, 255, 0.35);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
