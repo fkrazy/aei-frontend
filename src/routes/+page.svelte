@@ -1,120 +1,339 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import logoCanal from '$lib/assets/logo-canal-x-y-yo.png';
+  import logoAei from '$lib/assets/logo-aei.png';
 </script>
 
-<div class="selector">
-  <h1>AEI — Propuestas de Diseño</h1>
-  <p>Selecciona una propuesta para previsualizar</p>
-  <div class="opciones">
-    <a href="{base}/propuesta-a" class="opcion opcion-a">
-      <span class="tag">Propuesta A</span>
-      <h2>Fiel al cliente</h2>
-      <p>Fondo azul dominante, estilo visual del PPT original adaptado a web. Respeta 100% la visión del cliente.</p>
-      <ul>
-        <li>Fondo azul #4472C4 en toda la página</li>
-        <li>Logos con glow blanco como hero</li>
-        <li>Títulos en amarillo dorado</li>
-        <li>Botones outline blancos</li>
-      </ul>
-      <span class="cta">Ver Propuesta A →</span>
-    </a>
+<div class="page">
 
-    <a href="{base}/propuesta-b" class="opcion opcion-b">
-      <span class="tag">Propuesta B</span>
-      <h2>Recomendación experta</h2>
-      <p>AEI como marca protagonista. Azul como acento estratégico, layout moderno que convierte mejor.</p>
-      <ul>
-        <li>AEI hero principal, Canal X y Yo como respaldo</li>
-        <li>Fondos alternados para respirar</li>
-        <li>CTA claro desde el primer scroll</li>
-        <li>Navegación web estándar</li>
-      </ul>
-      <span class="cta">Ver Propuesta B →</span>
-    </a>
-  </div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-brand">AEI</div>
+      <div class="nav-links">
+        <a href="#microcursos">Microcursos</a>
+        <a href="#trilogia">Trilogía</a>
+        <a href="#nosotros">Nosotros</a>
+      </div>
+      <a href="#cursos" class="nav-cta">Ver cursos</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="diagonal-top"></div>
+    <div class="hero-inner">
+      <div class="logo-wrap">
+        <div class="logo-glow">
+          <img src={logoCanal} alt="Canal X y Yo" class="logo-img" />
+        </div>
+      </div>
+      <div class="hero-center">
+        <h1>Arte Educación <span class="gold">Inteligente</span></h1>
+        <p>Plataforma de recursos educativos digitales — aprendizaje, creatividad e inclusión</p>
+        <div class="hero-btns">
+          <a href="#cursos" class="btn-outline">Explorar cursos</a>
+          <a href="#trilogia" class="btn-outline">Trilogía AEI</a>
+        </div>
+      </div>
+      <div class="logo-wrap">
+        <div class="logo-glow">
+          <img src={logoAei} alt="AEI — Arte Educación Inteligente" class="logo-img" />
+        </div>
+      </div>
+    </div>
+    <div class="vision-mision">
+      <div class="vm-block">
+        <h3 class="vm-label">Visión</h3>
+        <p>Convertirnos en una plataforma líder en la creación y venta de recursos educativos digitales, reconocida por combinar calidad pedagógica, inclusión e innovación.</p>
+      </div>
+      <div class="vm-block">
+        <h3 class="vm-label">Misión</h3>
+        <p>Crear y comercializar recursos educativos digitales que integren aprendizaje, creatividad e inclusión, ofreciendo materiales prácticos, atractivos y adaptables.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MICROCURSOS -->
+  <section id="microcursos" class="microcursos">
+    <h2 class="section-title gold">MICROCURSOS</h2>
+    <div class="hub">
+      <div class="hub-left">
+        <button class="age-btn">Radiología</button>
+        <button class="age-btn">Tomografía</button>
+        <button class="age-btn">Pedagogía</button>
+      </div>
+      <div class="hub-center">
+        <div class="logo-glow large">
+          <img src={logoCanal} alt="Canal X y Yo" class="logo-img large" />
+        </div>
+      </div>
+      <div class="hub-right">
+        <button class="age-btn">Ultrasonido</button>
+        <button class="age-btn">Resonancia</button>
+        <button class="age-btn">IA General</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS LIST -->
+  <section id="cursos" class="cursos-list">
+    <div class="cursos-inner">
+      <div class="logo-glow">
+        <img src={logoCanal} alt="Canal X y Yo" class="logo-img" />
+      </div>
+      <div class="cursos-cards">
+        {#each ['Radiología Básica', 'Ultrasonido Avanzado', 'Tomografía Computada', 'Resonancia Magnética'] as curso}
+          <div class="curso-row">
+            <span>{curso}</span>
+            <button class="btn-outline small">Ver curso</button>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </section>
+
+  <!-- TRILOGÍA -->
+  <section id="trilogia" class="trilogia">
+    <p class="trilogia-title-box">Trilogía de Aprendizaje con Inteligencia Artificial</p>
+    <div class="trilogia-inner">
+      <div class="logo-glow">
+        <img src={logoAei} alt="AEI — Arte Educación Inteligente" class="logo-img" />
+      </div>
+      <div class="edad-grid">
+        {#each [['0 a 1 año', '1 a 3 años'], ['4 a 6 años', '7 a 10 años'], ['11 a 15 años', '16 a 20 años']] as fila}
+          <div class="edad-fila">
+            {#each fila as rango}
+              <button class="age-btn">{rango}</button>
+            {/each}
+          </div>
+        {/each}
+        <button class="age-btn full abuelitos">Abuelitos</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>AEI · Arte Educación Inteligente</span>
+  </footer>
 </div>
 
+
 <style>
-  .selector {
+  .page {
+    background: var(--color-primary);
     min-height: 100vh;
-    background: #1a1a2e;
+    color: white;
+    font-family: var(--font-family);
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(46, 91, 168, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: none;
+  }
+  .nav-inner {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 16px 32px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 60px 24px;
     gap: 32px;
   }
-
-  .selector h1 {
-    font-size: 2rem;
+  .nav-brand { font-size: 1.5rem; font-weight: 700; color: var(--color-accent-gold); }
+  .nav-links { display: flex; gap: 24px; flex: 1; }
+  .nav-links a { color: rgba(255,255,255,0.8); font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: white; }
+  .nav-cta {
+    background: var(--color-accent-gold);
+    color: var(--color-text-dark);
+    padding: 8px 20px;
+    border-radius: var(--radius-button);
     font-weight: 700;
-    color: #FFC000;
-    text-align: center;
+    font-size: 0.875rem;
   }
 
-  .selector > p {
-    color: rgba(255,255,255,0.6);
-    font-size: 1.1rem;
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 60px 32px 40px;
+    overflow: hidden;
   }
+  .diagonal-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    opacity: 0.15;
+  }
+  .hero-inner {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .logo-wrap { display: flex; justify-content: center; }
+  .logo-glow {
+    border-radius: 50%;
+    box-shadow: var(--shadow-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  .logo-img.large { width: 240px; height: 240px; }
+  .logo-glow.large { box-shadow: 0 0 60px 30px rgba(255,255,255,0.35); }
 
-  .opciones {
+  .hero-center { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .hero-center h1 { font-size: 2.5rem; font-weight: 700; color: white; line-height: 1.2; }
+  .hero-center p { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 400px; }
+  .hero-btns { display: flex; gap: 16px; }
+
+  .gold { color: var(--color-accent-gold); }
+
+  .btn-outline {
+    border: 2px solid rgba(255,255,255,0.7);
+    background: transparent;
+    color: white;
+    padding: 10px 24px;
+    border-radius: var(--radius-button);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+  .btn-outline.small { padding: 6px 14px; font-size: 0.8rem; }
+
+  .vision-mision {
+    max-width: var(--spacing-container);
+    margin: 40px auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    max-width: 900px;
-    width: 100%;
+    padding: 0 32px;
   }
+  .vm-block { display: flex; flex-direction: column; gap: 8px; }
+  .vm-label { font-size: 1.5rem; font-weight: 700; color: rgba(255,255,255,0.2); }
+  .vm-block p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.7; }
 
-  .opcion {
-    background: rgba(255,255,255,0.05);
-    border: 2px solid rgba(255,255,255,0.15);
-    border-radius: 16px;
-    padding: 36px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    cursor: pointer;
-    transition: border-color 0.2s, transform 0.2s;
+  /* MICROCURSOS */
+  .microcursos {
+    padding: 80px 32px;
+    background: var(--color-primary-dark);
   }
-
-  .opcion:hover { transform: translateY(-4px); }
-  .opcion-a:hover { border-color: #4472C4; }
-  .opcion-b:hover { border-color: #FFC000; }
-
-  .tag {
-    font-size: 0.75rem;
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 999px;
+    margin-bottom: 48px;
+    letter-spacing: 0.05em;
+  }
+  .hub {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .hub-left, .hub-right { display: flex; flex-direction: column; gap: 16px; }
+  .hub-right { align-items: flex-end; }
+  .hub-center { display: flex; justify-content: center; }
+
+  .age-btn {
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--radius-button);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 160px;
+    text-align: center;
+  }
+  .age-btn:hover { background: rgba(255,255,255,0.18); }
+  .age-btn.full { width: 100%; }
+  .age-btn.abuelitos { color: var(--color-accent-gold); border-color: var(--color-accent-gold); }
+
+  /* CURSOS LIST */
+  .cursos-list { padding: 80px 32px; }
+  .cursos-inner {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .cursos-cards { display: flex; flex-direction: column; gap: 16px; }
+  .curso-row {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius-button);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  /* TRILOGÍA */
+  .trilogia { padding: 80px 32px; background: var(--color-primary-dark); }
+  .trilogia-title-box {
+    display: block;
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
     width: fit-content;
+    margin: 0 auto 40px;
   }
+  .trilogia-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .edad-grid { display: flex; flex-direction: column; gap: 16px; }
+  .edad-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-  .opcion-a .tag { background: #4472C4; color: white; }
-  .opcion-b .tag { background: #FFC000; color: #44546A; }
-
-  .opcion h2 { font-size: 1.4rem; font-weight: 700; color: white; }
-
-  .opcion p { color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6; }
-
-  .opcion ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-
-  .opcion ul li {
-    color: rgba(255,255,255,0.5);
+  /* FOOTER */
+  .footer {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
     font-size: 0.875rem;
-    padding-left: 16px;
-    position: relative;
+    color: rgba(255,255,255,0.5);
   }
 
-  .opcion ul li::before { content: '·'; position: absolute; left: 0; color: rgba(255,255,255,0.3); }
-
-  .cta { margin-top: auto; font-weight: 600; font-size: 0.95rem; }
-  .opcion-a .cta { color: #5B9BD5; }
-  .opcion-b .cta { color: #FFC000; }
-
-  @media (max-width: 640px) {
-    .opciones { grid-template-columns: 1fr; }
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .vision-mision { grid-template-columns: 1fr; }
+    .hub { grid-template-columns: 1fr; }
+    .cursos-inner { grid-template-columns: 1fr; }
+    .trilogia-inner { grid-template-columns: 1fr; }
   }
 </style>
