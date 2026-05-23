@@ -8,7 +8,9 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <div class="nav-brand">AEI</div>
+      <a href="/" class="nav-brand">
+        <img src={logoAei} alt="AEI" class="nav-logo" />
+      </a>
       <div class="nav-links">
         <a href="#microcursos">Microcursos</a>
         <a href="#trilogia">Trilogía</a>
@@ -142,7 +144,14 @@
     align-items: center;
     gap: 32px;
   }
-  .nav-brand { font-size: 1.5rem; font-weight: 700; color: var(--color-accent-gold); }
+  .nav-brand { display: flex; align-items: center; flex-shrink: 0; }
+  .nav-logo {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
   .nav-links { display: flex; gap: 24px; flex: 1; }
   .nav-links a { color: rgba(255,255,255,0.8); font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: white; }
