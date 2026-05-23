@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import logoCanal from '$lib/assets/logo-canal-x-y-yo.png';
   import logoAei from '$lib/assets/logo-aei.png';
 </script>
@@ -8,7 +9,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a href="/" class="nav-brand">
+      <a href="{base}/" class="nav-brand">
         <img src={logoAei} alt="AEI" class="nav-logo" />
       </a>
       <div class="nav-links">
