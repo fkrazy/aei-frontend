@@ -20,7 +20,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="diagonal-top"></div>
     <div class="hero-inner">
       <div class="logo-wrap">
         <div class="logo-glow">
@@ -44,11 +43,11 @@
     <div class="vision-mision">
       <div class="vm-block">
         <h3 class="vm-label">Visión</h3>
-        <p>Convertirnos en una plataforma líder en la creación y venta de recursos educativos digitales, reconocida por combinar calidad pedagógica, inclusión e innovación.</p>
+        <p>Convertirnos en una plataforma líder en la creación y venta de recursos educativos digitales, reconocida por combinar calidad pedagógica, inclusión e innovación, generando soluciones de aprendizaje que aporten valor real a las personas y sostenibilidad al proyecto.</p>
       </div>
       <div class="vm-block">
         <h3 class="vm-label">Misión</h3>
-        <p>Crear y comercializar recursos educativos digitales que integren aprendizaje, creatividad e inclusión, ofreciendo materiales prácticos, atractivos y adaptables.</p>
+        <p>Crear y comercializar recursos educativos digitales que integren aprendizaje, creatividad e inclusión, ofreciendo materiales prácticos, atractivos y adaptables para distintos públicos, con el propósito de construir una propuesta educativa rentable, escalable y con impacto positivo.</p>
       </div>
     </div>
   </section>
@@ -161,14 +160,6 @@
     position: relative;
     padding: 60px 32px 40px;
     overflow: hidden;
-  }
-  .diagonal-top {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 60px;
-    background: white;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-    opacity: 0.15;
   }
   .hero-inner {
     max-width: var(--spacing-container);
@@ -330,10 +321,61 @@
   }
 
   @media (max-width: 768px) {
+    /* NAV */
+    .nav-inner { padding: 14px 20px; gap: 16px; }
+    .nav-links { display: none; }
+
+    /* HERO */
+    .hero { padding: 40px 20px 32px; }
+    .hero-inner {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+    .hero-center {
+      grid-column: 1 / -1;
+      order: -1;
+    }
+    .hero-center h1 { font-size: 1.8rem; }
+    .hero-btns { flex-wrap: wrap; justify-content: center; }
+
+    /* VISIÓN/MISIÓN */
+    .vision-mision {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+      margin-top: 32px;
+    }
+
+    /* MICROCURSOS */
+    .microcursos { padding: 60px 20px; }
+    .hub { grid-template-columns: 1fr; gap: 32px; }
+    .hub-left, .hub-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+    .hub-right { align-items: start; }
+    .hub-center { order: -1; }
+    .age-btn { min-width: unset; width: 100%; }
+
+    /* CURSOS */
+    .cursos-list { padding: 60px 20px; }
+    .cursos-inner { grid-template-columns: 1fr; gap: 32px; }
+    .cursos-inner .logo-glow { display: none; }
+
+    /* TRILOGÍA */
+    .trilogia { padding: 60px 20px; }
+    .trilogia-title-box { font-size: 0.9rem; padding: 8px 16px; }
+    .trilogia-inner { grid-template-columns: 1fr; gap: 32px; }
+    .trilogia-inner .logo-glow { display: none; }
+    .edad-fila { gap: 12px; }
+  }
+
+  @media (max-width: 480px) {
     .hero-inner { grid-template-columns: 1fr; }
-    .vision-mision { grid-template-columns: 1fr; }
-    .hub { grid-template-columns: 1fr; }
-    .cursos-inner { grid-template-columns: 1fr; }
-    .trilogia-inner { grid-template-columns: 1fr; }
+    .logo-img { width: 140px; height: 140px; }
+    .hero-center h1 { font-size: 1.5rem; }
+    .hero-center p { font-size: 1rem; }
+    .hub-left, .hub-right { grid-template-columns: 1fr; }
+    .edad-fila { grid-template-columns: 1fr; }
   }
 </style>
