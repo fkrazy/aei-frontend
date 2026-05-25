@@ -7,12 +7,12 @@
   const categorias = ['Todos', 'Radiología', 'Ultrasonido', 'Tomografía', 'Resonancia', 'Pedagogía', 'IA'];
 
   const cursos = [
-    { id: 'radiologia-basica',       titulo: 'Radiología Básica',        categoria: 'Radiología',   precio: 99,  duracion: '8h', modulos: 12 },
-    { id: 'ultrasonido-avanzado',    titulo: 'Ultrasonido Avanzado',     categoria: 'Ultrasonido',  precio: 120, duracion: '10h', modulos: 15 },
-    { id: 'tomografia-computada',    titulo: 'Tomografía Computada',     categoria: 'Tomografía',   precio: 110, duracion: '9h', modulos: 13 },
-    { id: 'resonancia-magnetica',    titulo: 'Resonancia Magnética',     categoria: 'Resonancia',   precio: 130, duracion: '12h', modulos: 16 },
-    { id: 'pedagogia-digital',       titulo: 'Pedagogía Digital',        categoria: 'Pedagogía',    precio: 89,  duracion: '6h', modulos: 10 },
-    { id: 'ia-diagnostico-medico',   titulo: 'IA en Diagnóstico Médico', categoria: 'IA',           precio: 149, duracion: '14h', modulos: 18 },
+    { id: 'radiologia-basica',       titulo: 'Radiología Básica',        categoria: 'Radiología',  precio: 99  },
+    { id: 'ultrasonido-avanzado',    titulo: 'Ultrasonido Avanzado',     categoria: 'Ultrasonido', precio: 120 },
+    { id: 'tomografia-computada',    titulo: 'Tomografía Computada',     categoria: 'Tomografía',  precio: 110 },
+    { id: 'resonancia-magnetica',    titulo: 'Resonancia Magnética',     categoria: 'Resonancia',  precio: 130 },
+    { id: 'pedagogia-digital',       titulo: 'Pedagogía Digital',        categoria: 'Pedagogía',   precio: 89  },
+    { id: 'ia-diagnostico-medico',   titulo: 'IA en Diagnóstico Médico', categoria: 'IA',          precio: 149 },
   ];
 
   const queryCategoria = $derived($page.url.searchParams.get('categoria') ?? 'Todos');
@@ -69,13 +69,9 @@
             <div class="card-body">
               <h3>{curso.titulo}</h3>
               <p class="instructor">Canal X y Yo</p>
-              <div class="card-meta">
-                <span>{curso.duracion}</span>
-                <span>{curso.modulos} módulos</span>
-              </div>
               <div class="card-footer">
                 <span class="precio">${curso.precio} USD</span>
-                <span class="cta">Ver curso →</span>
+                <span class="cta">Ver más →</span>
               </div>
             </div>
           </a>
@@ -158,7 +154,6 @@
   .card-body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .card-body h3 { font-size: 1rem; font-weight: 700; color: var(--color-text-dark); }
   .instructor { font-size: 0.8rem; color: var(--color-primary); font-weight: 600; }
-  .card-meta { display: flex; gap: 16px; font-size: 0.8rem; color: #888; }
   .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 12px; border-top: 1px solid #eee; }
   .precio { font-size: 1.1rem; font-weight: 700; color: var(--color-text-dark); }
   .cta { font-size: 0.875rem; font-weight: 600; color: var(--color-primary); }
