@@ -79,10 +79,13 @@
 
   <!-- TRILOGÍA -->
   <section id="trilogia" class="trilogia">
-    <p class="trilogia-title-box">Trilogía de Aprendizaje con Inteligencia Artificial</p>
+    <h2 class="section-title gold">TRILOGÍA AEI</h2>
+    <p class="trilogia-subtitulo">Aprendizaje con Inteligencia Artificial para todas las edades</p>
     <div class="trilogia-inner">
-      <div class="logo-glow">
-        <img src={logoAei} alt="AEI — Arte Educación Inteligente" class="logo-img" />
+      <div class="hub-center">
+        <div class="logo-glow large">
+          <img src={logoAei} alt="AEI — Arte Educación Inteligente" class="logo-img large" />
+        </div>
       </div>
       <div class="edad-grid">
         {#each [['0 a 1 año', '1 a 3 años'], ['4 a 6 años', '7 a 10 años'], ['11 a 15 años', '16 a 20 años']] as fila}
@@ -258,24 +261,20 @@
   .age-btn.abuelitos { color: var(--color-accent-gold); border-color: var(--color-accent-gold); }
 
   /* TRILOGÍA */
-  .trilogia { padding: 80px 32px; background: var(--color-primary-dark); }
-  .trilogia-title-box {
-    display: block;
-    background: white;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px 24px;
-    border-radius: 4px;
+  .trilogia { padding: 80px 32px; background: var(--color-primary); }
+  .trilogia-subtitulo {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
     font-size: 1rem;
-    width: fit-content;
-    margin: 0 auto 40px;
+    margin-top: -32px;
+    margin-bottom: 48px;
   }
   .trilogia-inner {
     max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 48px;
+    gap: 56px;
     align-items: center;
   }
   .edad-grid { display: flex; flex-direction: column; gap: 16px; }
@@ -332,9 +331,9 @@
 
     /* TRILOGÍA */
     .trilogia { padding: 60px 20px; }
-    .trilogia-title-box { font-size: 0.9rem; padding: 8px 16px; }
+    .trilogia-subtitulo { margin-top: -24px; font-size: 0.9rem; }
     .trilogia-inner { grid-template-columns: 1fr; gap: 32px; }
-    .trilogia-inner .logo-glow { display: none; }
+    .trilogia-inner .hub-center { display: none; }
     .edad-fila { gap: 12px; }
   }
 
