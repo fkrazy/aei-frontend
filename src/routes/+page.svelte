@@ -255,7 +255,6 @@
     align-items: center;
   }
   .hub-left, .hub-right { display: flex; flex-direction: column; gap: 16px; }
-  .hub-right { align-items: flex-end; }
   .hub-center { display: flex; justify-content: center; }
 
   .age-btn {
@@ -359,14 +358,15 @@
 
     /* MICROCURSOS */
     .microcursos { padding: 60px 20px; }
-    .hub { grid-template-columns: 1fr; gap: 32px; }
-    .hub-left, .hub-right {
-      display: grid;
+    .hub {
       grid-template-columns: 1fr 1fr;
-      align-items: start;
+      grid-template-rows: auto auto;
+      gap: 16px;
     }
-    .hub-right { align-items: start; }
-    .hub-center { order: -1; }
+    .hub-center {
+      grid-column: 1 / -1;
+      order: -1;
+    }
     .age-btn { min-width: unset; width: 100%; }
 
     /* CURSOS */
