@@ -17,7 +17,7 @@
         <a href="#trilogia">Trilogía</a>
         <a href="#nosotros">Nosotros</a>
       </div>
-      <a href="#cursos" class="nav-cta">Ver cursos</a>
+      <a href="#microcursos" class="nav-cta">Ver cursos</a>
     </div>
   </nav>
 
@@ -73,23 +73,6 @@
         <button class="age-btn">Ultrasonido</button>
         <button class="age-btn">Resonancia</button>
         <button class="age-btn">IA General</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- CURSOS LIST -->
-  <section id="cursos" class="cursos-list">
-    <div class="cursos-inner">
-      <div class="logo-glow">
-        <img src={logoCanal} alt="Canal X y Yo" class="logo-img" />
-      </div>
-      <div class="cursos-cards">
-        {#each ['Radiología Básica', 'Ultrasonido Avanzado', 'Tomografía Computada', 'Resonancia Magnética'] as curso}
-          <div class="curso-row">
-            <span>{curso}</span>
-            <button class="btn-outline small">Ver curso</button>
-          </div>
-        {/each}
       </div>
     </div>
   </section>
@@ -274,28 +257,6 @@
   .age-btn.full { width: 100%; }
   .age-btn.abuelitos { color: var(--color-accent-gold); border-color: var(--color-accent-gold); }
 
-  /* CURSOS LIST */
-  .cursos-list { padding: 80px 32px; }
-  .cursos-inner {
-    max-width: var(--spacing-container);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  .cursos-cards { display: flex; flex-direction: column; gap: 16px; }
-  .curso-row {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: var(--radius-button);
-    padding: 16px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
-  }
-
   /* TRILOGÍA */
   .trilogia { padding: 80px 32px; background: var(--color-primary-dark); }
   .trilogia-title-box {
@@ -368,11 +329,6 @@
       order: -1;
     }
     .age-btn { min-width: unset; width: 100%; }
-
-    /* CURSOS */
-    .cursos-list { padding: 60px 20px; }
-    .cursos-inner { grid-template-columns: 1fr; gap: 32px; }
-    .cursos-inner .logo-glow { display: none; }
 
     /* TRILOGÍA */
     .trilogia { padding: 60px 20px; }
