@@ -88,14 +88,10 @@
         </div>
       </div>
       <div class="edad-grid">
-        {#each [['0 a 1 año', '1 a 3 años'], ['4 a 6 años', '7 a 10 años'], ['11 a 15 años', '16 a 20 años']] as fila}
-          <div class="edad-fila">
-            {#each fila as rango}
-              <button class="age-btn">{rango}</button>
-            {/each}
-          </div>
+        {#each [['0 a 1 año', '0-1'], ['1 a 3 años', '1-3'], ['4 a 6 años', '4-6'], ['7 a 10 años', '7-10'], ['11 a 15 años', '11-15'], ['16 a 20 años', '16-20']] as [label, slug]}
+          <a href="{base}/trilogia/{slug}" class="age-btn">{label}</a>
         {/each}
-        <button class="age-btn full abuelitos">Abuelitos</button>
+        <a href="{base}/trilogia/abuelitos" class="age-btn full abuelitos">Abuelitos</a>
       </div>
     </div>
   </section>
@@ -277,8 +273,7 @@
     gap: 56px;
     align-items: center;
   }
-  .edad-grid { display: flex; flex-direction: column; gap: 16px; }
-  .edad-fila { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .edad-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
   /* FOOTER */
   .footer {
@@ -334,7 +329,7 @@
     .trilogia-subtitulo { margin-top: -24px; font-size: 0.9rem; }
     .trilogia-inner { grid-template-columns: 1fr; gap: 32px; }
     .trilogia-inner .hub-center { display: none; }
-    .edad-fila { gap: 12px; }
+    .edad-grid { gap: 12px; }
   }
 
   @media (max-width: 480px) {
@@ -343,6 +338,6 @@
     .hero-center h1 { font-size: 1.5rem; }
     .hero-center p { font-size: 1rem; }
     .hub-left, .hub-right { grid-template-columns: 1fr; }
-    .edad-fila { grid-template-columns: 1fr; }
+    .edad-grid { grid-template-columns: 1fr; }
   }
 </style>
