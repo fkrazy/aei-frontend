@@ -222,15 +222,17 @@
 
   .vision-mision {
     max-width: var(--spacing-container);
-    margin: 40px auto 0;
+    margin: 56px auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    padding: 0 32px;
+    gap: 40px;
+    padding: 40px 32px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 12px;
   }
-  .vm-block { display: flex; flex-direction: column; gap: 8px; }
-  .vm-label { font-size: 1.5rem; font-weight: 700; color: rgba(255,255,255,0.2); }
-  .vm-block p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.7; }
+  .vm-block { display: flex; flex-direction: column; gap: 12px; }
+  .vm-label { font-size: 1.25rem; font-weight: 700; color: var(--color-accent-gold); text-transform: uppercase; letter-spacing: 0.08em; }
+  .vm-block p { color: white; font-size: 0.95rem; line-height: 1.8; }
 
   /* MICROCURSOS */
   .microcursos {
