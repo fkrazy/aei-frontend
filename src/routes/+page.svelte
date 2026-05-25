@@ -60,9 +60,9 @@
     <h2 class="section-title gold">MICROCURSOS</h2>
     <div class="hub">
       <div class="hub-left">
-        <button class="age-btn">Radiología</button>
-        <button class="age-btn">Tomografía</button>
-        <button class="age-btn">Pedagogía</button>
+        <a href="{base}/cursos?categoria=Radiolog%C3%ADa" class="age-btn">Radiología</a>
+        <a href="{base}/cursos?categoria=Tomograf%C3%ADa" class="age-btn">Tomografía</a>
+        <a href="{base}/cursos?categoria=Pedagog%C3%ADa" class="age-btn">Pedagogía</a>
       </div>
       <div class="hub-center">
         <div class="logo-glow large">
@@ -70,9 +70,9 @@
         </div>
       </div>
       <div class="hub-right">
-        <button class="age-btn">Ultrasonido</button>
-        <button class="age-btn">Resonancia</button>
-        <button class="age-btn">IA General</button>
+        <a href="{base}/cursos?categoria=Ultrasonido" class="age-btn">Ultrasonido</a>
+        <a href="{base}/cursos?categoria=Resonancia" class="age-btn">Resonancia</a>
+        <a href="{base}/cursos?categoria=IA" class="age-btn">IA General</a>
       </div>
     </div>
   </section>
