@@ -2,24 +2,12 @@
   import { base } from '$app/paths';
   import logoCanal from '$lib/assets/logo-canal-x-y-yo.png';
   import logoAei from '$lib/assets/logo-aei.png';
+  import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
 <div class="page">
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-inner">
-      <a href="{base}/" class="nav-brand">
-        <img src={logoAei} alt="AEI" class="nav-logo" />
-      </a>
-      <div class="nav-links">
-        <a href="#microcursos">Microcursos</a>
-        <a href="#trilogia">Trilogía</a>
-        <a href="#nosotros">Nosotros</a>
-      </div>
-      <a href="#microcursos" class="nav-cta">Ver cursos</a>
-    </div>
-  </nav>
+  <Navbar />
 
   <!-- HERO -->
   <section class="hero">
@@ -33,7 +21,7 @@
         <h1>Arte Educación <span class="gold">Inteligente</span></h1>
         <p>Plataforma de recursos educativos digitales — aprendizaje, creatividad e inclusión</p>
         <div class="hero-btns">
-          <a href="#cursos" class="btn-outline">Explorar cursos</a>
+          <a href="#microcursos" class="btn-outline">Microcursos</a>
           <a href="#trilogia" class="btn-outline">Trilogía AEI</a>
         </div>
       </div>
@@ -108,43 +96,6 @@
     min-height: 100vh;
     color: white;
     font-family: var(--font-family);
-  }
-
-  /* NAV */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(46, 91, 168, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: none;
-  }
-  .nav-inner {
-    max-width: var(--spacing-container);
-    margin: 0 auto;
-    padding: 16px 32px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-  .nav-brand { display: flex; align-items: center; flex-shrink: 0; }
-  .nav-logo {
-    height: 44px;
-    width: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-  }
-  .nav-links { display: flex; gap: 24px; flex: 1; }
-  .nav-links a { color: rgba(255,255,255,0.8); font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: white; }
-  .nav-cta {
-    background: var(--color-accent-gold);
-    color: var(--color-text-dark);
-    padding: 8px 20px;
-    border-radius: var(--radius-button);
-    font-weight: 700;
-    font-size: 0.875rem;
   }
 
   /* HERO */
@@ -287,10 +238,6 @@
   }
 
   @media (max-width: 768px) {
-    /* NAV */
-    .nav-inner { padding: 14px 20px; gap: 16px; }
-    .nav-links { display: none; }
-
     /* HERO */
     .hero { padding: 40px 20px 32px; }
     .hero-inner {
